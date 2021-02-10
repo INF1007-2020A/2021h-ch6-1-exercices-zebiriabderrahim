@@ -3,22 +3,28 @@
 
 
 def order(values: list = None) -> list:
-    if values is None:
-        # TODO: demander les valeurs ici
-        pass
+    list=[]
+    for i in range(10):
+        list.append(input("Enter a value: "))
 
-    return []
+
+    return sorted(list)
 
 
 def anagrams(words: list = None) -> bool:
-    if words is None:
-        # TODO: demander les mots ici
-        pass
+    word1 = (input("Enter a word: "))
+    worwd2 = (input("Enter a anag: "))
+    if worwd2 == word1[::-1]:
+        return True
+    else:
+        return False
 
-    return False
 
 
 def contains_doubles(items: list) -> bool:
+    for i in list:
+        if i ==
+
     return False
 
 
