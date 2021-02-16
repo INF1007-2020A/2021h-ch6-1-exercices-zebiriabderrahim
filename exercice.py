@@ -5,10 +5,9 @@
 def order(values: list = None) -> list:
     list=[]
     for i in range(10):
-        list.append(input("Enter a value: "))
-
-
-    return sorted(list)
+        l=input("Enter a value: ")
+        list.append(l)
+    return sorted(values)
 
 
 def anagrams(words: list = None) -> bool:
@@ -20,24 +19,32 @@ def anagrams(words: list = None) -> bool:
         return False
 
 
-
 def contains_doubles(items: list) -> bool:
-    for i in list:
-        if i ==
-
-    return False
-
-
+    for i in items:
+        if items.count(i)>1:
+            return True
+        else:
+            return False
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    best_grade = {}
+    for names, notes in student_grades.items():
+        best_grade[names] = sum(notes) / len(names)
+    student_grades = {min(best_grade): best_grade[min(best_grade)] for key in student_grades}
+    return student_grades
 
 
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
-    #       Retourner le tableau de lettres
-
-    return {}
+    sentence_d = sentence.replace(' ', '')
+    lettre_n_use = {}
+    for letters in sentence_d:
+        if sentence_d.count(letters) > 5:
+            lettre_n_use[letters] = sentence_d.count(letters)
+        #       Retourner le tableau de lettres
+    a = dict(sorted(lettre_n_use.items(), key=lambda item: item[1], reverse=True))
+    for i in a:
+        return (i,a[i])
 
 
 def get_recipes():
